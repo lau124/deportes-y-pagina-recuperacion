@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Equipos de Fútbol</title>
+  <link rel="stylesheet" href="style.css"> <!-- Enlazar el archivo CSS -->
+</head>
+<body>
+  <h1>Lista de Equipos de Fútbol</h1>
+
+  <!-- Formulario de entrada -->
+  <form id="team-form">
+    <input type="text" id="team-name" placeholder="Nombre del equipo" required>
+    <input type="text" id="team-country" placeholder="País del equipo" required>
+    <button type="submit">Agregar equipo</button>
+  </form>
+
+  <!-- Lista de equipos locales -->
+  <ul id="team-list"></ul>
+
+  <h2>Equipos de Fútbol (API)</h2>
+  <div id="api-teams"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>

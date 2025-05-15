@@ -1,0 +1,322 @@
+:root {
+  /* Color palette */
+  --primary: #1e88e5;
+  --primary-dark: #1565c0;
+  --secondary: #26a69a;
+  --secondary-dark: #00897b;
+  --background: #f5f7fa;
+  --card-bg: #ffffff;
+  --text: #333333;
+  --text-light: #757575;
+  --border: #e0e0e0;
+  --danger: #e53935;
+  --danger-dark: #c62828;
+  --success: #43a047;
+  
+  /* Spacing */
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+  --spacing-xl: 32px;
+  
+  /* Shadows */
+  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 4px 8px rgba(0, 0, 0, 0.12);
+  --shadow-lg: 0 8px 16px rgba(0, 0, 0, 0.14);
+  
+  /* Border radius */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  
+  /* Transitions */
+  --transition: 0.3s ease;
+}
+
+/* Base styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  background-color: var(--background);
+  color: var(--text);
+  line-height: 1.6;
+  padding: var(--spacing-lg);
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  margin-bottom: var(--spacing-md);
+  font-weight: 600;
+  color: var(--primary-dark);
+}
+
+h1 {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: var(--spacing-xl);
+  color: var(--primary);
+  position: relative;
+  padding-bottom: var(--spacing-md);
+}
+
+h1::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background-color: var(--primary);
+  border-radius: 2px;
+}
+
+h2 {
+  font-size: 1.8rem;
+  margin-top: var(--spacing-xl);
+  margin-bottom: var(--spacing-lg);
+  padding-bottom: var(--spacing-xs);
+  border-bottom: 2px solid var(--primary);
+  display: inline-block;
+}
+
+/* Form styles */
+form {
+  background-color: var(--card-bg);
+  padding: var(--spacing-lg);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-md);
+  margin-bottom: var(--spacing-xl);
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-md);
+  align-items: center;
+}
+
+input {
+  flex: 1;
+  min-width: 200px;
+  padding: var(--spacing-md);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  font-size: 1rem;
+  transition: border-color var(--transition), box-shadow var(--transition);
+}
+
+input:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(30, 136, 229, 0.25);
+}
+
+button {
+  padding: var(--spacing-md) var(--spacing-lg);
+  background-color: var(--primary);
+  color: white;
+  border: none;
+  border-radius: var(--radius-sm);
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color var(--transition), transform var(--transition);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+button:hover {
+  background-color: var(--primary-dark);
+  transform: translateY(-2px);
+}
+
+button:active {
+  transform: translateY(0);
+}
+
+/* Team list styles */
+#team-list {
+  list-style: none;
+  margin-bottom: var(--spacing-xl);
+}
+
+#team-list li {
+  background-color: var(--card-bg);
+  margin-bottom: var(--spacing-md);
+  padding: var(--spacing-md) var(--spacing-lg);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+
+#team-list li:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+#team-list span {
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+#team-list button {
+  margin-left: var(--spacing-sm);
+  padding: var(--spacing-sm) var(--spacing-md);
+  font-size: 0.9rem;
+}
+
+#team-list button:first-of-type {
+  background-color: var(--secondary);
+}
+
+#team-list button:first-of-type:hover {
+  background-color: var(--secondary-dark);
+}
+
+#team-list button:last-of-type {
+  background-color: var(--danger);
+}
+
+#team-list button:last-of-type:hover {
+  background-color: var(--danger-dark);
+}
+
+/* API teams grid */
+#api-teams {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: var(--spacing-lg);
+  margin-top: var(--spacing-lg);
+}
+
+.card {
+  background-color: var(--card-bg);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  transition: transform var(--transition), box-shadow var(--transition);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: var(--spacing-lg);
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
+}
+
+.card img {
+  width: 120px;
+  height: 120px;
+  object-fit: contain;
+  margin-bottom: var(--spacing-md);
+  transition: transform var(--transition);
+}
+
+.card:hover img {
+  transform: scale(1.05);
+}
+
+.card h3 {
+  font-size: 1.2rem;
+  margin-bottom: var(--spacing-xs);
+  text-align: center;
+  color: var(--text);
+}
+
+.card p {
+  color: var(--text-light);
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+/* Loading state */
+#api-teams:empty::after,
+#api-teams:has(> :only-child:empty)::after {
+  content: 'Cargando equipos...';
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: var(--spacing-xl);
+  color: var(--text-light);
+  font-style: italic;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  body {
+    padding: var(--spacing-md);
+  }
+  
+  h1 {
+    font-size: 2rem;
+  }
+  
+  h2 {
+    font-size: 1.5rem;
+  }
+  
+  form {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  input, button {
+    width: 100%;
+  }
+  
+  #team-list li {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--spacing-md);
+  }
+  
+  #team-list span {
+    margin-bottom: var(--spacing-sm);
+  }
+  
+  #team-list button {
+    margin-left: 0;
+    margin-right: var(--spacing-sm);
+  }
+  
+  #api-teams {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+}
+
+/* Small screens */
+@media (max-width: 480px) {
+  #api-teams {
+    grid-template-columns: 1fr;
+  }
+  
+  .card {
+    max-width: 100%;
+  }
+}
+
+/* Animation for new items */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+#team-list li, .card {
+  animation: fadeIn 0.5s ease forwards;
+}
