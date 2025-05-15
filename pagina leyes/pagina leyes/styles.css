@@ -1,0 +1,256 @@
+/* === Estilo para el enlace "Volver al inicio" === */
+.return-to-home {
+  text-align: center;
+  margin-top: 3rem;
+}
+
+.return-to-home a {
+  font-size: 1.25rem;
+  color: #F39C12; /* Dorado suave */
+  text-decoration: none;
+  font-weight: 500;
+  padding: 0.75rem 1.5rem;
+  border: 2px solid #F39C12; /* Dorado suave */
+  border-radius: 8px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  display: inline-block;
+}
+
+.return-to-home a:hover {
+  background-color: #F39C12; /* Dorado suave */
+  color: #ffffff; /* Texto blanco cuando pasa el mouse */
+  transform: translateY(-2px);
+}
+
+/* === Restante de los estilos === */
+
+/* === Importar fuente profesional === */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
+
+/* === Reset básico === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #F4F4F9; /* Fondo principal */
+  color: #4A4A4A; /* Color de texto principal más suave */
+  line-height: 1.6;
+  font-size: 16px;
+}
+
+/* === Encabezado HERO === */
+header.hero {
+  background: linear-gradient(180deg, #F06292 0%, #E91E63 100%); /* Fondo del hero: rosa suave */
+  color: white;
+  padding: 6rem 2rem 3rem;
+  text-align: center;
+  position: relative;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.hero-content p {
+  font-size: 1.25rem;
+  font-weight: 300;
+  margin-bottom: 2rem;
+}
+
+nav {
+  margin-top: 2rem;
+}
+
+nav a {
+  color: #F39C12; /* Dorado suave */
+  margin: 0 1rem;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #FF5722; /* Naranja profesional */
+}
+
+/* === Botones === */
+.btn, .btn-secondary {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.btn {
+  background-color: #F06292; /* Rosa suave */
+  color: #ffffff;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.btn:hover {
+  background-color: #E91E63; /* Rosa más fuerte */
+  transform: translateY(-2px);
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: #F39C12; /* Dorado suave */
+  border: 2px solid #F39C12;
+}
+
+.btn-secondary:hover {
+  background-color: #F39C12;
+  color: #ffffff;
+}
+
+/* === Main content === */
+main {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem;
+}
+
+/* === Secciones informativas === */
+.intro, .featured-expo, .highlights {
+  margin-bottom: 3rem;
+}
+
+.intro h2, .highlights h3, .featured-box h3 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #D58BF0; /* Lavanda suave */
+}
+
+.intro p, .highlights p, .featured-box p {
+  font-size: 1.1rem;
+  font-weight: 300;
+  color: #4A4A4A; /* Gris suave para textos secundarios */
+}
+
+/* === Caja destacada === */
+.featured-box {
+  background-color: #ffffff;
+  border-left: 6px solid #F39C12; /* Dorado suave */
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+  transition: box-shadow 0.3s ease;
+}
+
+.featured-box:hover {
+  box-shadow: 0 12px 28px rgba(0,0,0,0.1);
+}
+
+/* === Galería === */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.gallery img {
+  width: 100%;
+  border-radius: 12px;
+  object-fit: cover;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+}
+
+.gallery img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+}
+
+/* === Contacto === */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-family: 'Poppins', sans-serif;
+}
+
+.contact-form button {
+  background-color: #F06292; /* Rosa suave */
+  color: #F4F4F9; /* Fondo claro */
+  border: none;
+  padding: 1rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: background 0.3s ease;
+}
+
+.contact-form button:hover {
+  background-color: #E91E63; /* Rosa más fuerte */
+}
+
+/* === Highlights === */
+.highlights {
+  background: #F3E5F5; /* Rosa claro */
+  border-radius: 10px;
+  padding: 2rem;
+}
+
+.highlights ul {
+  list-style: none;
+  padding: 0;
+  font-size: 1.1rem;
+  font-weight: 300;
+}
+
+.highlights li {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #ddd;
+}
+
+/* === Footer === */
+footer {
+  background: #F06292; /* Rosa suave */
+  color: #F4F4F9;
+  text-align: center;
+  padding: 2rem 1rem;
+  font-weight: 300;
+  margin-top: 4rem;
+}
+
+/* === Responsive === */
+@media (max-width: 600px) {
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+
+  .btn, .btn-secondary {
+    width: 100%;
+    text-align: center;
+  }
+
+  nav a {
+    display: block;
+    margin: 0.5rem 0;
+  }
+}
+
+
